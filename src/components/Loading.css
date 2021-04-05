@@ -1,0 +1,40 @@
+.loading-container {
+  margin: 16px;
+}
+
+.loading-image-container {
+  display: flex;
+  justify-content: center;
+}
+
+.loading-image {
+  height: 20vmin;
+}
+
+.loading-text {
+  margin: 16px;
+  text-align: center;
+  font-weight: bold;
+  font-size: 5vmin;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .loading-image {
+    animation: Spin infinite 20s linear;
+  }
+}
+
+@keyframes Spin {
+  from {
+    transform: rotate(0deg);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+@media screen and (max-width: 960px) {
+  .loading-image {
+    height: 10vmin;
+  }
+}
